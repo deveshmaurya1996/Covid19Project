@@ -1,0 +1,99 @@
+.bar {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.graph-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.heading-container {
+  text-align: start;
+}
+@media screen and (max-width: 768px) {
+  .heading-container {
+    text-align: center;
+  }
+}
+
+.bar-container {
+  margin: 10px;
+  width: 95%;
+  height: 400px;
+}
+.line-chart-wrapper {
+  max-width: 95%;
+  overflow-x: auto;
+  border-radius: 10px;
+}
+.bar-chart-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.trends-heading {
+  color: #cbd5e1;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .trends-heading {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.bar-confirmed-chart {
+  margin-bottom: 20px;
+  width: 55%;
+}
+
+.bar-active-chart {
+  margin-bottom: 20px;
+  width: 95%;
+}
+
+.bar-recovered-chart {
+  margin-bottom: 20px;
+  width: 95%;
+}
+
+.bar-deceased-chart {
+  margin-bottom: 20px;
+  width: 95%;
+}
+
+.cummulative-confirmed-chart {
+  background-color: #331427;
+  margin-bottom: 20px;
+  width: 95%;
+}
+
+.cummulative-active-chart {
+  background-color: #132240;
+  margin-bottom: 20px;
+  width: 95%;
+}
+
+.cummulative-recovered-chart {
+  background-color: #182829;
+  margin-bottom: 20px;
+  width: 95%;
+}
+
+.cummulative-deceased-chart {
+  background-color: #212230;
+  margin-bottom: 20px;
+  width: 95%;
+}
+
+.cummulative-tested-chart {
+  width: 95%;
+  background-color: #230f41;
+  margin-bottom: 20px;
+}
