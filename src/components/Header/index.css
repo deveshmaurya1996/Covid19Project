@@ -10,6 +10,13 @@
   position: fixed;
 }
 
+.header-upper-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media screen and (min-width: 760px) {
   .nav-bar-sm-container {
     display: none;
@@ -55,7 +62,7 @@
   .nav-sm-container {
     display: flex;
     flex-direction: row;
-    align-self: flex-end;
+    justify-content: center;
   }
 }
 .sm-list-container {
@@ -67,11 +74,9 @@
     display: flex;
     flex-direction: column;
   }
-  .logo-hamburger-menu-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+}
+.logo-container {
+  align-content: center;
 }
 
 .nav-item-link {
@@ -119,4 +124,9 @@
 }
 .blank-link {
   display: none;
+}
+@media screen and (min-width: 760px) {
+  .nav-sm-container {
+    display: none;
+  }
 }

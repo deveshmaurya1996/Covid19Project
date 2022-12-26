@@ -32,13 +32,15 @@ class Header extends Component {
 
     return (
       <nav className="header-container">
-        <div className="navbar-main-large-container">
-          <Link to="/" className="nav-item-link">
-            <h1 className="logo-heading">
-              COVID19<span className="india">INDIA</span>
-            </h1>
-          </Link>
-          <div className="nav-bar-large-container">
+        <div className="header-upper-container">
+          <div className="logo-container">
+            <Link to="/" className="nav-item-link">
+              <h1 className="logo-heading">
+                COVID19<span className="india">INDIA</span>
+              </h1>
+            </Link>
+          </div>
+          <div className="navbar-main-large-container">
             <ul className="nav-controls">
               <Link to="/" className="nav-item-link">
                 <li
@@ -62,14 +64,8 @@ class Header extends Component {
               </li>
             </ul>
           </div>
-        </div>
-        <div className="navbar-main-small-container">
-          <div className="logo-hamburger-menu-container">
-            <Link to="/" className="nav-item-link">
-              <h1 className="logo-heading">
-                COVID19<span className="india">INDIA</span>
-              </h1>
-            </Link>
+
+          <div className="navbar-main-small-container">
             <button
               type="button"
               onClick={this.onClickHamburgerMenu}
@@ -82,56 +78,55 @@ class Header extends Component {
               />
             </button>
           </div>
-
-          {displaySmNavItems && (
-            <ThemeContext.Consumer>
-              {value => {
-                const {theme} = value
-                const smallContLightMode =
-                  theme === true ? 'small-light-mode' : ''
-                return (
-                  <div className={`nav-sm-container ${smallContLightMode}`}>
-                    <ul className="sm-list-container">
-                      <Link to="/" className="nav-item-link">
-                        <li
-                          className={`nav-item ${activeHomeClass}`}
-                          onClick={this.onClickActiveHomeNav}
-                        >
-                          Home
-                        </li>
-                      </Link>
-                      <Link to="/about" className="nav-item-link">
-                        <li
-                          onClick={this.onClickActiveAboutNav}
-                          className={`nav-item ${activeAboutClass}`}
-                        >
-                          About
-                        </li>
-                      </Link>
-                      <li className="nav-item">
-                        <Theme />
-                      </li>
-                      <li className="nav-item">
-                        <button
-                          testid="close-nav-btn"
-                          className="close-nav-btn"
-                          type="button"
-                          onClick={this.onClickCloseNav}
-                        >
-                          <img
-                            src="https://res.cloudinary.com/dxknzwqf3/image/upload/v1671442891/Solid_i4v3u2.png"
-                            alt="close nav btn"
-                            className="close-nav-btn"
-                          />
-                        </button>
-                      </li>
-                    </ul>
-                  </div>
-                )
-              }}
-            </ThemeContext.Consumer>
-          )}
         </div>
+        {displaySmNavItems && (
+          <ThemeContext.Consumer>
+            {value => {
+              const {theme} = value
+              const smallContLightMode =
+                theme === true ? 'small-light-mode' : ''
+              return (
+                <div className={`nav-sm-container ${smallContLightMode}`}>
+                  <ul className="sm-list-container">
+                    <Link to="/" className="nav-item-link">
+                      <li
+                        className={`nav-item ${activeHomeClass}`}
+                        onClick={this.onClickActiveHomeNav}
+                      >
+                        Home
+                      </li>
+                    </Link>
+                    <Link to="/about" className="nav-item-link">
+                      <li
+                        onClick={this.onClickActiveAboutNav}
+                        className={`nav-item ${activeAboutClass}`}
+                      >
+                        About
+                      </li>
+                    </Link>
+                    <li className="nav-item">
+                      <Theme />
+                    </li>
+                    <li className="nav-item">
+                      <button
+                        testid="close-nav-btn"
+                        className="close-nav-btn"
+                        type="button"
+                        onClick={this.onClickCloseNav}
+                      >
+                        <img
+                          src="https://res.cloudinary.com/dxknzwqf3/image/upload/v1671442891/Solid_i4v3u2.png"
+                          alt="close nav btn"
+                          className="close-nav-btn"
+                        />
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              )
+            }}
+          </ThemeContext.Consumer>
+        )}
       </nav>
     )
   }
