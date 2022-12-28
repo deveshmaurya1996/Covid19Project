@@ -1,0 +1,70 @@
+.heading {
+  font-family: 'Bree Serif';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #f8fafc;
+  cursor: pointer;
+  margin: 0px;
+}
+.color-class {
+  color: #161625;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.india {
+  color: #3b82f6;
+}
+
+.description {
+  color: #94a3b8;
+  font-weight: normal;
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .description {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.icons-container {
+  display: flex;
+}
+
+.icon {
+  font-size: 30px;
+  line-height: 51px;
+  color: #cbd5e1;
+  margin-right: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.light-theme-icon {
+  color: #161625;
+}
+
+@media screen and (max-width: 768px) {
+  .icon {
+    font-size: 26px;
+    line-height: 41px;
+  }
+}
+.link {
+  text-decoration: none;
+}
